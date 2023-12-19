@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+<record id="category_diagazilla" model="ir.module.category">
+    <field name="name">Diagizilla</field>
+</record>
+    
+ <record id="diagizzila_user" model="res.groups">
+    <field name="name">user</field>
+    <field name="category_id" ref="category_diagazilla"/>
+ </record>
+  <record id="diagizzila_admin" model="res.groups">
+    <field name="name">Admin</field>
+    <field name="category_id" ref="category_diagazilla"/>
+ </record>
+</data>
+
+    
+
+</odoo>
+
+
+

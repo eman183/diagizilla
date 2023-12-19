@@ -1,0 +1,101 @@
+<odoo>
+    <data>
+        <template id="diagizilla.diagizilla_report">
+                      <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="a">
+                    <t t-call="web.basic_layout">
+                        <div class="page">
+
+                            <div class="row bg-200">
+                                <div class="col-4 text-left">
+                                    <span class="text-center">
+                                        <strong>Diagizilla Report</strong>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <table class="table borderless" style="height:100px;">
+                                <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                        Name:
+                                        <span t-field="a.name"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                       Join Date:
+                                        <span t-field="a.join_date"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="mr-2 text-center">
+                                       Country:
+                                        <span t-field="a.country"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                        Gender:
+                                        <span t-field="a.gender"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                        Company:
+                                        <span t-field="a.company_id"/>
+                                    </td>
+                                
+                                    <td class=" mr-2 text-center">
+                                        Comments:
+                                        <span t-field="a.comments"/>
+                                    </td>
+                                   
+                                </tr>
+                                 <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                           
+                                        Notes:
+                                        <span t-field="a.notes"/>
+                                    </td>
+                                    </tr>
+
+                            </table>
+                            <div>
+                                <center>
+                                    <strong>
+                                       Logs
+                                    </strong>
+                                </center>
+
+                            </div>
+
+                     <table class="table table-sm table-bordered">
+                                <thead style="display: table-row-group">
+                                    <tr class="table-primary border border-white">
+                                        <th class="text-center border border-white"> User</th>
+                                        <th class="text-center border border-white"> Date</th>
+                                        <th class="text-center border border-white"> massage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="counter" t-value="0"/>
+                                    <t t-foreach="a.logs" t-as="e">
+                                        <t t-set="counter" t-value="counter + 1"/>
+                                        <tr class="border border-white">
+                                            <td class="text-center border border-white">
+                                                <span t-field="e.create_uid" />
+                                            </td>
+                                            <td class="text-center border border-white">
+                                                <span t-field="e.create_date"/>
+                                            </td>
+                                            <td class="text-center border border-white">
+                                                <span t-field="e.massage" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table> 
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

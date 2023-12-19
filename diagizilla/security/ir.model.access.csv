@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_diagizilla_adminn,diagizilla_diagizilla,model_diagizilla_diagizilla,diagizzila_admin,1,1,1,1
+access_diagizilla_userr,diagizilla_user,model_diagizilla_diagizilla,diagizzila_user,1,0,0,0
+access_diagizilla_admin_log,logs_admin,model_logs_logs,diagizzila_admin,1,1,1,1
+access_diagizilla_user_log,logs_user,model_logs_logs,diagizzila_user,1,0,0,0
